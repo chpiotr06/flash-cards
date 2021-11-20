@@ -9,25 +9,25 @@
   <title>Flash cards</title>
 </head>
 <body>
+  <div data-visible="false" id="add-card">
+    <div class="flex">
+    <div class="add face front">
+      <textarea placeholder="Enter question" id="question"></textarea>
+    </div>
+    <div class="add face back">
+      <textarea placeholder="Enter answer" id="answer" ></textarea>
+    </div>
+    </div>
+    <button type="button" id="add-card-btn">Add new card</button>
+    <button type="button" id="discard-btn">Discard new card</button>
+  </div>
   <header>
     <div class="title">
       Flash Cards
     </div>
-    <button type="button">Add new card</button>
+    <button type="button" id="add-menu-btn">Add new card</button>
   </header>
   <div class="app">
-    <div  class="flash-card">
-      <div class="face front">Kto kocha Amelkę?</div>
-      <div class="face back">Ja</div>
-    </div>
-    <div  class="flash-card">
-      <div class="face front">Kto jest najpiękniejszy?</div>
-      <div class="face back">Amelka</div>
-    </div>
-    <div  class="flash-card">
-      <div class="face front">Kto jest najbardziej uroczy?</div>
-      <div class="face back">Amelka</div>
-    </div>
   </div>
 </body>
 </html>

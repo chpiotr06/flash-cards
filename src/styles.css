@@ -7,11 +7,28 @@
   --contrast-color: 254,222,222;
   font-family: "Montserrat", "Helvetica Neue";
 }
-
+.flex{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 body{
   background-color: rgba(var(--background-color),1);
   margin: 0;
   height: 100vh;
+}
+#add-card{
+  position: fixed;
+  transition: all 0.5s ease-in;
+  transform: translateY(-4000px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(var(--background-color), 0.9);
+  z-index: 2;
 }
 
 header{
@@ -30,6 +47,7 @@ header{
 
 button{
   background-color: rgba(var(--secondary-color), 1);
+  transition: all 0.1s ease-in;
   border:0;
   border-radius: 10px;
   font-size: 0.6em;
@@ -38,6 +56,7 @@ button{
   font-weight: 400;
   color:rgba(var(--contrast-color), 1);
 }
+button:hover { background-color: rgba(var(--secondary-color), 0.6); }
 
 *{
   box-sizing: border-box;
@@ -81,4 +100,40 @@ button{
   transform: rotateX(180deg) translateZ(50px);
   color: rgba(var(--secondary-color),1);
   z-index: 0;
+}
+
+.add{
+  margin: 20px;
+  width: 600px;
+  height: 300px;
+  position: static;
+  transform: none;
+}
+textarea{
+  resize: none;
+  width: 95%;
+  height: 95%;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  font-size: 0.8em;
+}
+
+.front > textarea{
+  color: rgba(var(--contrast-color),1);
+}
+
+.back > textarea{
+  color: rgba(var(--secondary-color),1);
+}
+
+textarea::placeholder{
+  color:rgba(0, 0, 0, 0.7);
+}
+
+#add-card-btn{
+  font-size: 1.5em;
+}
+#discard-btn{
+  font-size: 1.5em;
+  margin-top: 20px;
 }
